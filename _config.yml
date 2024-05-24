@@ -1,6 +1,6 @@
 theme: minima
 
-title: statpoints//
+title: statpoints _//
 #author: thegreedypeople
 #email: thegreedypeople
 #url: https://thegreedypeople.github.io
@@ -85,7 +85,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: https://s.gravatar.com/avatar/2136e716a089f4a3794f4007328c7bfb?s=800 # Apply default site image
+      image:  # Apply default site image
   - scope:
       path: ""
       type: posts
