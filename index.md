@@ -1,2 +1,3 @@
-
-Mga himaya sa huna-huna.
+---
+layout: home
+---

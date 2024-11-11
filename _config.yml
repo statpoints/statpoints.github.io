@@ -1,100 +1,91 @@
-theme: minima
+# Site settings
+title: pathtoexile # site title
+description: >- # site description
+  the symptoms persists.
+lang: en-US # default lang
+timezone: Asia/Singapore # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/pathtoexile/pathtoexile.github.io # site repo [optional]
+mode: light # default theme "dark" | "light"
 
-title: statpoints.
-#author: thegreedypeople
-#email: thegreedypeople
-#url: https://thegreedypeople.github.io
+# Profile settings
+author:
+#  name: (-_-) # author name
+# bio: >- # tell to the world
+#   The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
+#   meet Klisé theme at <a href="https://github.com/piharpi/jekyll-klise" target="_blank" rel="noopener">@github</a>.
+#  username: username # general username
+#  github: github_username # github username
+#  twitter: twitter_username # twitter username
+#  facebook: facebook_username # facebook username
+#  email: your-email@email.com # email adress
+  avatar: /assets/img/old.png # change with your own avatar
 
-timezone: Etc/UTC # GitHub uses UTC. This is to force dev environment to match
-future: false # GitHub Pages will publish future posts if this isn't set to false
+# URL settings
+#url: "https://klise.now.sh" #
+baseurl:
+permalink: /:title/
+google_analytics: # leave it blank if not wish
+fb_appid:
 
-description: >
-  Cultivate contentment.
-
-# Minima variables
-#twitter_username:  thegreedypeople
-#github_username:   thegreedypeople
-#linkedin_username: thegreedypeople
-#dribbble_username: jekyll
-#facebook_username: jekyll
-#flickr_username: jekyll
-#instagram_username: jekyll
-#pinterest_username: jekyll
-#youtube_username: jekyll
-#googleplus_username: +jekyll
-rss: rss
-
-show_excerpts: false
-
-# Used by simple links page
-#social-links:
-#  Resume:          
-#  LinkedIn:        
-#  StackOverflow:   
-#  HackerRank:      
-#  GitHub:          
-#  Microsoft Learn: 
-#  Twitter:         
-#  Reddit:          
-#  Credly:          
-#  PluralSight:     
-#  Website:         
-
-# plugin: jekyll-seo-tag
-#twitter:
-#  username: thegreedypeople
-#  card: summary_large_image
-#social:
-#  name: thegreedypeople
-#  links:
-#    - https://twitter.com/thegreedypeople
-#    - https://linkedin.com/in/thegreedypeople
-#    - https://github.com/thegreedypeople
-
-# plugin: jekyll-titles-from-headings
-titles_from_headings:
-  strip_title: true
-
+# Collection setting
 collections:
-  personal: # collection for personal blog posts
+  posts:
     output: true
 
-header_pages:
-#  - resume.html
-  - archive.html
-#  - books.md
-#  - bookmarks.md
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-google_analytics:
-#  - UA-xxxxxx-1 # Old GA Universal Analytics property
-  - G-9WJC80G9XK # New GA4 property
-
-gravatar_hash: 2136e716a089f4a3794f4007328c7bfb
-code_block_max_height: 500px
-
-home_post_limit: 5
-
-# The github repo that is to be used for looking up comments
-comments_repo: statpoints/f-comments
-
+# Default front matter
 defaults:
   - scope:
       path: ""
     values:
-      image:  # Apply default site image
-  - scope:
-      path: ""
-      type: posts
-    values:
-      tags:
-        - Other # Add a default tag to all posts
+      layout: post
+      comments: false
 
-# Disable highlighting to use highlightJS instead
-# highlighter: none # Not supported by GitHub Pages
-kramdown:
-  syntax_highlighter_opts:
-    disable: true
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 13
+
+# Build settings
+# theme: klise
+sass:
+  style: compressed
+
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-postfiles
