@@ -1,0 +1,46 @@
+---
+layout: base
+---
+
+<h2 style="color: red;">from home</h2>
+
+{%- if page.title -%}
+<h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
+
+{{ content }}
+
+<pre>
+site.paginate == {{ site.paginate }}
+Total number of posts: {{ site.posts | size }}
+</pre>
+
+<h1>Blog</h1>
+<article>
+  <h6>Recent Posts</h6>
+  {% for post in paginator.posts %}
+    <div>
+      <p><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time></p>
+      <p><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+    </div>
+  {% endfor %}
+
+  <hr />
+
+  <!-- Pagination Links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}">Previous</a>
+    {% else %}
+      <span>Previous</span>
+    {% endif %}
+    
+    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}">Next</a>
+    {% else %}
+      <span>Next</span>
+    {% endif %}
+  </div>
+</article>

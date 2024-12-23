@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+<head>
+  {%- include head.html -%}
+  {%- include custom-head.html -%}
+</head>
+<body>
+  {%- include header.html -%}
+
+  <main class="container">
+    <section>
+      {{content}}
+    </section>
+    <!-- <section>
+      <h2>Main Body Content</h2>
+      <p>This is the main content area. It is centered and has a fixed width of 960px.</p>
+      <p>This is a short paragraph of text. It's concise and provides quick information.</p>
+      <p>Another short paragraph. Here we provide more brief content to the reader.</p>
+      <p>A third short paragraph. It's just enough to provide some additional details.</p>
+      <p>This is a longer paragraph where we can add more detailed information. It might contain explanations, insights, or a story. Here we are expanding on a specific topic, diving deeper into the subject matter. For example, this paragraph could provide information about the features of a product or explain a complex process in more depth. The goal is to engage the reader by providing substantial content that requires a bit more attention and thought.</p>
+      <p>Here is another longer paragraph, where we continue the explanation. The reader will be interested in learning more as we provide additional context and details. Longer paragraphs are helpful when describing processes, narrating events, or providing technical explanations. In this example, we might be explaining a tutorial or offering insight into the development of a project over time. This helps to keep the reader engaged for a longer period, offering valuable insights along the way.</p>
+    </section> -->
+
+    <!-- Second Section: Post List -->
+    <section class="content">
+
+    </section>
+  </main>
+  {%- include footer.html -%}
+</body>
+</html>
